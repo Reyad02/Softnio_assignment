@@ -29,15 +29,15 @@
 
     <title>Document</title>
   </head>
-  <body class=" max-w-7xl mx-auto flex flex-col gap-10 pt-5">
+  <body class="max-w-7xl mx-auto flex flex-col gap-10 pt-5">
     <main class="flex justify-center items-center gap-3">
       <!-- product image -->
       <div class="flex-1">
-        <img class="rounded" src="assets//lg-a 3 (3).png" alt="" />
+        <img class="rounded" src="assets/purple.png" id="thumbnail" alt="" />
       </div>
 
       <!-- product details -->
-      <div class="flex flex-col flex-1 ">
+      <div class="flex flex-col flex-1">
         <!-- title  -->
         <p class="font-bold text-[#364A63] text-[40px] pt-3 pb-3">
           Classy Modern Smart watch
@@ -86,10 +86,30 @@
         <div class="pt-5 flex flex-col gap-[10px]">
           <p class="text-[#364A63] font-bold text-lg">Band Color</p>
           <div class="flex gap-5">
-            <div class="rounded-full h-4 w-4 bg-[#816BFF]"></div>
-            <div class="rounded-full h-4 w-4 bg-[#1FCEC9]"></div>
-            <div class="rounded-full h-4 w-4 bg-[#4B97D3]"></div>
-            <div class="rounded-full h-4 w-4 bg-[#3B4747]"></div>
+            <div class="border-[#816BFF] border-2 rounded-full p-1">
+              <div
+                class="rounded-full h-4 w-4 bg-[#816BFF] color"
+                id="purple"
+              ></div>
+            </div>
+            <div class=" rounded-full p-1">
+              <div
+                class="rounded-full h-4 w-4 bg-[#1FCEC9] color"
+                id="cyan"
+              ></div>
+            </div>
+            <div class=" rounded-full p-1">
+              <div
+                class="rounded-full h-4 w-4 bg-[#4B97D3] color"
+                id="blue"
+              ></div>
+            </div>
+            <div class=" rounded-full p-1">
+              <div
+                class="rounded-full h-4 w-4 bg-[#3B4747] color"
+                id="black"
+              ></div>
+            </div>
           </div>
         </div>
 
@@ -123,17 +143,20 @@
         <!-- quantity and cart -->
         <div class="pt-5 flex gap-[10px] items-center">
           <div class="flex items-center text-[#8091A7]">
-            <button onclick="productQuantityDecrease()"
+            <button
+              onclick="productQuantityDecrease()"
               class="pt-1 pb-1 pl-2 pr-2 border border-[#DBDFEA] border-r-0 rounded-l"
             >
               <i class="fa-solid fa-minus"></i>
             </button>
-            <p id="quantity"
+            <p
+              id="quantity"
               class="text-[#364A63] border border-[#DBDFEA] pt-1 pb-1 pl-[26px] pr-[26px]"
             >
               0
             </p>
-            <button onclick="productQuantityIncrease()"
+            <button
+              onclick="productQuantityIncrease()"
               class="pt-1 pb-1 pl-2 pr-2 border border-[#DBDFEA] border-l-0 rounded-r"
             >
               <i class="fa-solid fa-plus"></i>
@@ -153,7 +176,15 @@
 
     <!-- checkout section -->
     <section class="flex items-center justify-center pt-5 pb-5">
-      <button class="rounded-[20px] flex bg-[#FFBB5A] text-[#364A63] pt-2 pb-2 pr-6 pl-6 gap-[10px] items-center justify-center text-sm font-bold">Checkout <span class="bg-white pt-[2px] pb-[2px] pl-[6px] pr-[6px] text-[12px] rounded">2</span></button>
+      <button
+        class="rounded-[20px] flex bg-[#FFBB5A] text-[#364A63] pt-2 pb-2 pr-6 pl-6 gap-[10px] items-center justify-center text-sm font-bold"
+      >
+        Checkout
+        <span
+          class="bg-white pt-[2px] pb-[2px] pl-[6px] pr-[6px] text-[12px] rounded"
+          >2</span
+        >
+      </button>
     </section>
 
     <script src="js/app.js"></script>

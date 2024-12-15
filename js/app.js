@@ -7,8 +7,17 @@ const cart = document.getElementById("cart");
 const checkout = document.getElementById("checkout");
 let totalQuantity = document.getElementById("totalQuantity");
 let favorite = document.getElementById("favorite");
+let checkoutBtn = document.getElementById("checkoutBtn");
+let data = [];
+let imageName;
+let sizeName;
 
-let unitPrice = 0;
+let unitPrice;
+
+// capitalized function
+function capitalized(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
 // product size and unit price
 for (const size of sizes) {
@@ -16,8 +25,8 @@ for (const size of sizes) {
     borderColorUnselect();
     size.style.borderColor = "#6576FF";
     size.style.color = "#6576FF";
-    // console.log(size.children[0].innerHTML);
-    unitPrice = size.children[0].innerHTML;
+    unitPrice = parseInt(size.children[0].innerHTML.split("$")[1]);
+    sizeName = size.childNodes[0].textContent.trim();
   });
 }
 
@@ -53,6 +62,7 @@ for (const color of colors) {
       "border-2"
     );
     thumbnail.src = `assets/${color.id}.png`;
+    imageName = color.id;
   });
 }
 
@@ -70,10 +80,24 @@ function colorUnselect() {
 cart.addEventListener("click", function () {
   let quantityNumber = parseInt(quantity.innerText);
   if (quantityNumber > 0 || parseInt(totalQuantity.innerText) > 0) {
+    const obj = {
+      name: document.getElementById("title").innerText,
+      image: capitalized(imageName || "purple"),
+      color: capitalized(imageName || "purple"),
+      size: sizeName || "S",
+      quantity: quantityNumber,
+      price: quantityNumber * unitPrice || 69 * quantityNumber,
+    };
+    data.push(obj);
     totalQuantity.innerText =
       parseInt(totalQuantity.innerText) + quantityNumber;
     checkout.classList.remove("hidden");
     checkout.classList.add("flex");
     quantity.innerText = 0;
   }
+});
+
+// checkoutBtn clicked
+checkoutBtn.addEventListener("click", function () {
+  console.log(data);
 });

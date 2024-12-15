@@ -29,7 +29,7 @@
 
     <title>Document</title>
   </head>
-  <body class="max-w-7xl mx-auto flex flex-col gap-10 pt-5">
+  <body class="max-w-7xl mx-auto flex flex-col gap-10 pt-[10px]">
     <main class="flex justify-center items-center gap-3">
       <!-- product image -->
       <div class="flex-1">
@@ -39,7 +39,7 @@
       <!-- product details -->
       <div class="flex flex-col flex-1">
         <!-- title  -->
-        <p class="font-bold text-[#364A63] text-[40px] pt-3 pb-3">
+        <p class="font-bold text-[#364A63] text-[40px] pt-3 pb-3" id="title">
           Classy Modern Smart watch
         </p>
 
@@ -92,19 +92,19 @@
                 id="purple"
               ></div>
             </button>
-            <button class=" rounded-full p-1">
+            <button class="rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#1FCEC9] color"
                 id="cyan"
               ></div>
             </button>
-            <button class=" rounded-full p-1">
+            <button class="rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#4B97D3] color"
                 id="blue"
               ></div>
             </button>
-            <button class=" rounded-full p-1">
+            <button class="rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#3B4747] color"
                 id="black"
@@ -162,7 +162,8 @@
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
-          <button id="cart"
+          <button
+            id="cart"
             class="bg-[#6576FF] text-white font-bold pt-2 pb-2 pl-[18px] pr-[18px] rounded text-sm"
           >
             Add to Cart
@@ -175,12 +176,14 @@
     </main>
 
     <!-- checkout section -->
-    <section class=" items-center justify-center pt-5 pb-5 hidden" id="checkout">
+    <section class="items-center justify-center pt-5 pb-5 hidden" id="checkout">
       <button
+        id="checkoutBtn"
         class="rounded-[20px] flex bg-[#FFBB5A] text-[#364A63] pt-2 pb-2 pr-6 pl-6 gap-[10px] items-center justify-center text-sm font-bold"
       >
         Checkout
-        <span id="totalQuantity"
+        <span
+          id="totalQuantity"
           class="bg-white pt-[2px] pb-[2px] pl-[6px] pr-[6px] text-[12px] rounded"
           >0</span
         >

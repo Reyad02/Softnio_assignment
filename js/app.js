@@ -2,6 +2,11 @@ const sizes = document.getElementsByClassName("size");
 const prices = document.getElementsByClassName("price");
 const colors = document.getElementsByClassName("color");
 const thumbnail = document.getElementById("thumbnail");
+let quantity = document.getElementById("quantity");
+const cart = document.getElementById("cart");
+const checkout = document.getElementById("checkout");
+let totalQuantity = document.getElementById("totalQuantity");
+let favorite = document.getElementById("favorite");
 
 let unitPrice = 0;
 
@@ -25,7 +30,6 @@ function borderColorUnselect() {
 
 // product quantity
 function productQuantityDecrease() {
-  let quantity = document.getElementById("quantity");
   let quantityNumber = parseInt(quantity.innerText);
   if (quantityNumber > 0) {
     quantityNumber--;
@@ -34,7 +38,6 @@ function productQuantityDecrease() {
 }
 
 function productQuantityIncrease() {
-  let quantity = document.getElementById("quantity");
   let quantityNumber = parseInt(quantity.innerText);
   quantityNumber++;
   quantity.innerText = quantityNumber;
@@ -62,3 +65,15 @@ function colorUnselect() {
     );
   }
 }
+
+// checkout section
+cart.addEventListener("click", function () {
+  let quantityNumber = parseInt(quantity.innerText);
+  if (quantityNumber > 0 || parseInt(totalQuantity.innerText) > 0) {
+    totalQuantity.innerText =
+      parseInt(totalQuantity.innerText) + quantityNumber;
+    checkout.classList.remove("hidden");
+    checkout.classList.add("flex");
+    quantity.innerText = 0;
+  }
+});

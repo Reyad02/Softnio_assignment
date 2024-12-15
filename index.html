@@ -86,30 +86,30 @@
         <div class="pt-5 flex flex-col gap-[10px]">
           <p class="text-[#364A63] font-bold text-lg">Band Color</p>
           <div class="flex gap-5">
-            <div class="border-[#816BFF] border-2 rounded-full p-1">
+            <button class="border-[#816BFF] border-2 rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#816BFF] color"
                 id="purple"
               ></div>
-            </div>
-            <div class=" rounded-full p-1">
+            </button>
+            <button class=" rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#1FCEC9] color"
                 id="cyan"
               ></div>
-            </div>
-            <div class=" rounded-full p-1">
+            </button>
+            <button class=" rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#4B97D3] color"
                 id="blue"
               ></div>
-            </div>
-            <div class=" rounded-full p-1">
+            </button>
+            <button class=" rounded-full p-1">
               <div
                 class="rounded-full h-4 w-4 bg-[#3B4747] color"
                 id="black"
               ></div>
-            </div>
+            </button>
           </div>
         </div>
 
@@ -162,27 +162,27 @@
               <i class="fa-solid fa-plus"></i>
             </button>
           </div>
-          <button
+          <button id="cart"
             class="bg-[#6576FF] text-white font-bold pt-2 pb-2 pl-[18px] pr-[18px] rounded text-sm"
           >
             Add to Cart
           </button>
-          <div>
-            <i class="fa-regular fa-heart text-[#6576FF]"></i>
-          </div>
+          <button>
+            <i class="fa-regular fa-heart text-[#6576FF]" id="favorite"></i>
+          </button>
         </div>
       </div>
     </main>
 
     <!-- checkout section -->
-    <section class="flex items-center justify-center pt-5 pb-5">
+    <section class=" items-center justify-center pt-5 pb-5 hidden" id="checkout">
       <button
         class="rounded-[20px] flex bg-[#FFBB5A] text-[#364A63] pt-2 pb-2 pr-6 pl-6 gap-[10px] items-center justify-center text-sm font-bold"
       >
         Checkout
-        <span
+        <span id="totalQuantity"
           class="bg-white pt-[2px] pb-[2px] pl-[6px] pr-[6px] text-[12px] rounded"
-          >2</span
+          >0</span
         >
       </button>
     </section>

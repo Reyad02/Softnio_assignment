@@ -29,7 +29,7 @@
 
     <title>Document</title>
   </head>
-  <body class="max-w-7xl mx-auto flex flex-col gap-10 pt-[10px]">
+  <body class="max-w-7xl mx-auto flex flex-col gap-10">
     <main class="flex justify-center items-center gap-3">
       <!-- product image -->
       <div class="flex-1">
@@ -188,6 +188,42 @@
           >0</span
         >
       </button>
+    </section>
+
+    <!-- modal section  -->
+    <section id="cart-modal" class="absolute h-screen hidden inset-0 bg-[#11121B8C]">
+      <div class="m-auto">
+        <div class="p-11 flex flex-col gap-4 rounded-[20px] bg-white">
+          <h2 class="text-xl font-bold text-[#364A63]">Your Cart</h2>
+          <table class="table-auto">
+            <thead>
+              <tr class="border-b border-[#DBDFEA] text-[#8091A7] text-sm">
+                <th class="pt-1 pr-5 pb-2 text-left">Item</th>
+                <th class="pt-1 pr-5 pb-2 text-center">Color</th>
+                <th class="pt-1 pr-5 pb-2 text-center">Size</th>
+                <th class="pt-1 pr-5 pb-2 text-center">Qnt</th>
+                <th class="pt-1 pr-5 pb-2 text-right">Price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-table-body">
+              <!-- table row dynamically added -->
+            </tbody>
+          </table>
+          <div class="flex gap-3 justify-end">
+            <button
+              id="continue"
+              class="rounded border border-[#DBDFEA] text-[#364A63] py-2 px-[18px] text-sm font-bold"
+            >
+              Continue Shopping
+            </button>
+            <button
+              class="rounded bg-[#6576FF] text-white py-2 px-[18px] text-sm font-bold"
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="js/app.js"></script>

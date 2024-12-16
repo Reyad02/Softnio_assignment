@@ -8,6 +8,10 @@ const checkout = document.getElementById("checkout");
 let totalQuantity = document.getElementById("totalQuantity");
 let favorite = document.getElementById("favorite");
 let checkoutBtn = document.getElementById("checkoutBtn");
+let modal = document.getElementById("cart-modal");
+let mainPart = document.querySelector("main");
+let cartTableBody = document.getElementById("cart-table-body");
+let continueBtn = document.getElementById("continue");
 let data = [];
 let imageName;
 let sizeName;
@@ -93,11 +97,50 @@ cart.addEventListener("click", function () {
       parseInt(totalQuantity.innerText) + quantityNumber;
     checkout.classList.remove("hidden");
     checkout.classList.add("flex");
-    quantity.innerText = 0;
   }
 });
 
 // checkoutBtn clicked
 checkoutBtn.addEventListener("click", function () {
-  console.log(data);
+  checkout.classList.remove("flex");
+  checkout.classList.add("hidden");
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+  modal.classList.add("transition", "duration-700", "ease-in-out");
+  cartTableBody.innerHTML = "";
+  data.forEach((item) => {
+    const row = `
+      <tr class="border-b text-sm text-[#364A63]">
+        <td class="flex gap-2 py-4 pr-5 items-center justify-start">
+          <img src="./assets/${item.image}.png" class="w-9 h-9 rounded" alt="" />
+          <p>${item.name}</p>
+        </td>
+        <td class="py-4 pr-5 text-center">${item.color}</td>
+        <td class="py-4 pr-5 text-center font-bold">${item.size}</td>
+        <td class="py-4 pr-5 text-center font-bold">${item.quantity}</td>
+        <td class="py-4 pr-5 text-right font-bold">$${item.price}.00</td>
+      </tr>
+    `;
+    cartTableBody.innerHTML += row;
+  });
+  let totalQuantity = data.reduce((total, qnt) => total + qnt.quantity, 0);
+  let totalPrice = data.reduce((total, price) => total + price.price, 0);
+  const total = `
+      <tr class="">
+        <td class="flex gap-2 py-4 pr-5 items-center justify-start">
+          <p class="font-bold text-[#373737] w-full">Total</p>
+        </td>
+
+        <td class="py-4 pr-5 text-center font-bold"></td>
+        <td class="py-4 pr-5 text-center font-bold"></td>
+        <td class="py-4 pr-5 text-center font-bold text-sm text-[#364A63]">${totalQuantity}</td>
+        <td class="py-4 pr-5 text-right font-bold text-lg text-[#364A63]">$${totalPrice}.00</td>
+      </tr>
+    `;
+  cartTableBody.innerHTML += total;
+});
+
+continueBtn.addEventListener("click", function () {
+  modal.classList.remove("flex");
+  modal.classList.add("hidden");
 });

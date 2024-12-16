@@ -113,7 +113,7 @@ checkoutBtn.addEventListener("click", function () {
       <tr class="border-b text-sm text-[#364A63]">
         <td class="flex gap-2 py-4 pr-5 items-center justify-start">
           <img src="./assets/${item.image}.png" class="w-9 h-9 rounded" alt="" />
-          <p>${item.name}</p>
+          <p class="hidden md:block">${item.name}</p>
         </td>
         <td class="py-4 pr-5 text-center">${item.color}</td>
         <td class="py-4 pr-5 text-center font-bold">${item.size}</td>

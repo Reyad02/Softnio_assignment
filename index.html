@@ -30,16 +30,16 @@
     <title>Document</title>
   </head>
   <body class="max-w-7xl mx-auto flex flex-col gap-10 mt-1">
-    <main class="flex justify-center items-center gap-3">
+    <main class="flex flex-col md:flex-row justify-center items-center gap-3">
       <!-- product image -->
       <div class="flex-1">
         <img class="rounded" src="assets/purple.png" id="thumbnail" alt="" />
       </div>
 
       <!-- product details -->
-      <div class="flex flex-col flex-1">
+      <div class="flex flex-col flex-1 items-center md:items-start">
         <!-- title  -->
-        <p class="font-bold text-[#364A63] text-[40px] pt-3 pb-3" id="title">
+        <p class="font-bold text-[#364A63] text-[40px] pt-3 pb-3 text-center md:text-left" id="title">
           Classy Modern Smart watch
         </p>
 
@@ -63,7 +63,7 @@
 
         <!-- description -->
         <div>
-          <p class="text-[#8091A7] text-lg pt-5 pr-1 gap-2">
+          <p class="text-[#8091A7] text-lg pt-5 pr-1 gap-2 text-center md:text-left">
             I must explain to you how all this mistaken idea of denoun cing ple
             praising pain was born and I will give you a complete account of the
             system, and expound the actual teaching.
@@ -83,7 +83,7 @@
         </div>
 
         <!-- color -->
-        <div class="pt-5 flex flex-col gap-[10px]">
+        <div class="pt-5 flex flex-col gap-[10px] items-center md:items-start">
           <p class="text-[#364A63] font-bold text-lg">Band Color</p>
           <div class="flex gap-5">
             <div class="border-[#816BFF] border-2 rounded-full p-1">
@@ -114,7 +114,7 @@
         </div>
 
         <!-- size -->
-        <div class="pt-5 flex flex-col gap-[10px]">
+        <div class="pt-5 flex flex-col gap-[10px] items-center md:items-start">
           <p class="text-[#364A63] font-bold text-lg">Wrist Size</p>
           <div class="flex gap-3">
             <button
@@ -191,7 +191,7 @@
     </section>
 
     <!-- modal section  -->
-    <section id="cart-modal" class="absolute h-screen hidden inset-0 bg-[#11121B8C]">
+    <section id="cart-modal" class="absolute h-full hidden inset-0 bg-[#11121B8C]">
       <div class="m-auto">
         <div class="p-11 flex flex-col gap-4 rounded-[20px] bg-white">
           <h2 class="text-xl font-bold text-[#364A63]">Your Cart</h2>

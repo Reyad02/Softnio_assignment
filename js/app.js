@@ -83,7 +83,7 @@ function colorUnselect() {
 // checkout section
 cart.addEventListener("click", function () {
   let quantityNumber = parseInt(quantity.innerText);
-  if (quantityNumber > 0 || parseInt(totalQuantity.innerText) > 0) {
+  if (quantityNumber > 0) {
     const obj = {
       name: document.getElementById("title").innerText,
       image: capitalized(imageName || "purple"),

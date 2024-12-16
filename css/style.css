@@ -1,12 +1,6 @@
 * {
   font-family: "Roboto";
-  /* padding-left: 30px; */
-  /* padding-right: 30px; */
 }
-
-/* main{
-    width: 1320px;
-    height: 720px;
-} */
-
-
+.color {
+  cursor: pointer;
+}

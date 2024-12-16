@@ -143,4 +143,6 @@ checkoutBtn.addEventListener("click", function () {
 continueBtn.addEventListener("click", function () {
   modal.classList.remove("flex");
   modal.classList.add("hidden");
+  checkout.classList.remove("hidden");
+  checkout.classList.add("flex");
 });

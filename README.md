@@ -4,7 +4,7 @@ A responsive **Product Detail Page** converted from a Figma design into function
 
 ## Live Demo
 
-- **HTML Version**: [View Live Site](https://lucky-llama-5c408b.netlify.app/)
+- [View Live Site](https://lucky-llama-5c408b.netlify.app/)
 
 ## Tech Stack
 

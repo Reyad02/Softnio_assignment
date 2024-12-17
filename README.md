@@ -5,6 +5,10 @@ A responsive **Product Detail Page** converted from a Figma design into function
 ## Live Demo
 
 - [View Live Site](https://lucky-llama-5c408b.netlify.app/)
+  
+## React Version
+
+- [React Version Code](https://github.com/Reyad02/Softnio_assignment_react)
 
 ## Tech Stack
 

@@ -23,6 +23,13 @@ A responsive **Product Detail Page** converted from a Figma design into function
 
 3. **Responsive Design**
    - Fully optimized for desktop, tablet and mobile views.
+  
+## Figma Design
+
+### Product Detail View
+![Product Detail](assets/Product%20-%20detail.png)
+
+
 
 ## How to Run Locally
 

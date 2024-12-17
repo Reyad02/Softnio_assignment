@@ -29,7 +29,8 @@ A responsive **Product Detail Page** converted from a Figma design into function
 ### Product Detail View
 ![Product Detail](assets/Product%20-%20detail.png)
 
-
+### Cart Modal
+![Cart Modal](assets/Cart%20-%20modal.png)
 
 ## How to Run Locally
 
